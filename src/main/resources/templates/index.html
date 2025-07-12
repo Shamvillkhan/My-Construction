@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description"
+	content="ConstructPro - Premier Construction & Architecture Services">
+<title>ConstructPro - Premier Construction & Architecture</title>
+
+<!-- Bootstrap 5.3.2 CSS -->
+<link
+	th:href="@{https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css}"
+	rel="stylesheet"
+	integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+	crossorigin="anonymous">
+
+<!-- Font Awesome 6.4.2 -->
+<link
+	th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css}"
+	rel="stylesheet"
+	integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+	crossorigin="anonymous">
+
+<!-- Google Fonts (Poppins) -->
+<link
+	th:href="@{https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap}"
+	rel="stylesheet">
+
+<!-- AOS Animation Library -->
+<link th:href="@{https://unpkg.com/aos@2.3.1/dist/aos.css}"
+	rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+<!-- Custom CSS -->
+<link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body>
+	<!-- Hero Background -->
+	<div class="hero-background"></div>
+
+	<!-- Navbar -->
+	<div th:replace="fragments/header :: header"></div>
+
+	<!-- Hero Content -->
+	<!-- Hero Content -->
+	<section id="home" class="hero-content">
+		<div class="container" style="margin-top:10px;">
+			<h1 class="animate-slideUp  hero-heading" style="padding-top:10px;  ">Build Your Dream Home with JKConstruction</h1>
+			<p class="animate-slideUp">Design. Construct. Amaze.
+				services for residential and commercial projects.</p>
+			<a href="#contact" class="btn btn-lg animate-slideUp"
+				style="animation-delay: 0.6s; color:#FFFFFF; background-color:#14213d;">Get a Quote</a>
+		</div>
+		<div class="scroll-indicator">
+			<i class="fas fa-chevron-down"></i>
+		</div>
+	</section>
+
+	<div class="section-separator"></div>
+
+	<!-- Main Content -->
+	<div class="content-wrapper">
+		<!-- About Section -->
+<section id="testimonials" class="py-5 content-section">
+  <div class="container">
+    <div class="section-title text-center mb-4">
+      <h2 class="animate-slideUp">Why Choose JKConstruction?</h2>
+      <p class="animate-slideUp">At JKConstruction, we turn your dream spaces into solid realities with precision, expertise, and dedication. From the first sketch to the final brick, our skilled team ensures excellence, transparency, and timely delivery. We build more than just structures — we craft homes and spaces that reflect your vision, powered by innovative technology and uncompromising quality.</p>
+    </div>
+
+    <div class="row justify-content-center">
+      <!-- Card 1 -->
+      <div class="col-lg-4 col-md-6 mb-4 d-flex justify-content-center">
+        <div class="card testimonial-card animate-slideUp p-3 w-100" style="animation-delay: 0.2s; min-height: 250px; max-width: 420px;">
+          <div class="d-flex align-items-center">
+            <img src="/image/pay.png" alt="Client A" class=" me-3" style="width: 60px; height: 60px; object-fit: cover;">
+            <p class="mb-0 text-start">Fixed pricing with no hidden costs or surprises and complete transparency. The estimate remains unchanged once finalized until and unless the client makes the changes.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-lg-4 col-md-6 mb-4 d-flex justify-content-center">
+        <div class="card testimonial-card animate-slideUp p-3 w-100" style="animation-delay: 0.3s; min-height: 250px; max-width: 420px;">
+          <div class="d-flex align-items-center">
+            <img src="/image/service.png" alt="Client B" class="  me-3" style="width: 60px; height: 60px; object-fit: cover;">
+            <p class="mb-0 text-start">Home construction with perfection! We perform 440+ quality checks on the construction, to ensure your home meets the highest construction standards.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-lg-4 col-md-6 mb-4 d-flex justify-content-center">
+        <div class="card testimonial-card animate-slideUp p-3 w-100" style="animation-delay: 0.4s; min-height: 250px; max-width: 420px;">
+          <div class="d-flex align-items-center">
+            <img src="/image/real-time.png" alt="Client C" class="  me-3" style="width: 60px; height: 60px; object-fit: cover;">
+            <p class="mb-0 text-start">Guaranteed on-time completion because your dream home shouldn’t wait. In rare delays, we impose penalties for accountability and your peace of mind.</p>
+          </div>
+        </div>
+      </div>
+      
+       <div class="col-lg-4 col-md-6 mb-4 d-flex justify-content-center">
+        <div class="card testimonial-card animate-slideUp p-3 w-100" style="animation-delay: 0.4s; min-height: 250px; max-width: 420px;">
+          <div class="d-flex align-items-center">
+            <img src="/image/money.png" alt="Client C" class="  me-3" style="width: 60px; height: 60px; object-fit: cover;">
+            <p class="mb-0 text-start">Our Construction-Linked Payment Plan lets you make stage-wise payments that align with your home's construction progress and bank loan terms.</p>
+          </div>
+        </div>
+      </div>
+      
+       <div class="col-lg-4 col-md-6 mb-4 d-flex justify-content-center">
+        <div class="card testimonial-card animate-slideUp p-3 w-100" style="animation-delay: 0.4s; min-height: 250px; max-width: 420px;">
+          <div class="d-flex align-items-center">
+            <img src="/image/24-hours-delivery.png" alt="Client C" class="  me-3" style="width: 60px; height: 60px; object-fit: cover;">
+            <p class="mb-0 text-start">Track your home construction with ease using our dashboard and mobile app. Get real-time updates, view timelines, and monitor milestones for transparency and control.</p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+
+		<!-- Services Section -->
+		<section id="services" class="py-5 bg-light content-section">
+			<div class="container">
+				<div class="section-title">
+					<h2 class="animate-slideUp">Our Services</h2>
+				</div>
+				<div class="row">
+					<div class="col-lg-4 col-md-6 mb-4">
+						<div class="card service-card p-4 text-center animate-slideUp"
+							style="animation-delay: 0.2s;">
+							<i class="fa-solid fa-compass fa-3x"></i>
+							<h4 class="mt-3">Project Planning</h4>
+							<p>Strategic planning to ensure your project is completed on
+								time and within budget.</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 mb-4">
+						<div class="card service-card p-4 text-center animate-slideUp"
+							style="animation-delay: 0.4s;">
+							<i class="fa-solid fa-building fa-3x"></i>
+							<h4 class="mt-3">Architectural Design</h4>
+							<p>Creative designs that balance aesthetics, functionality,
+								and sustainability.</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 mb-4">
+						<div class="card service-card p-4 text-center animate-slideUp"
+							style="animation-delay: 0.6s;">
+							<i class="fa-solid fa-hammer fa-3x"></i>
+							<h4 class="mt-3">Construction</h4>
+							<p>Expert construction services for residential, commercial,
+								and industrial projects.</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 mb-4">
+						<div class="card service-card p-4 text-center animate-slideUp"
+							style="animation-delay: 0.2s;">
+							<i class="fa-solid fa-paint-roller fa-3x"></i>
+							<h4 class="mt-3">Interior Design</h4>
+							<p>Custom interior solutions to enhance your space’s beauty
+								and functionality.</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 mb-4">
+						<div class="card service-card p-4 text-center animate-slideUp"
+							style="animation-delay: 0.4s;">
+							<i class="fa-solid fa-bolt fa-3x"></i>
+							<h4 class="mt-3">Electrical Systems</h4>
+							<p>Reliable electrical installations for safety and
+								efficiency.</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 mb-4">
+						<div class="card service-card p-4 text-center animate-slideUp"
+							style="animation-delay: 0.6s;">
+							<i class="fa-solid fa-leaf fa-3x"></i>
+							<h4 class="mt-3">Sustainable Building</h4>
+							<p>Eco-friendly construction practices for a greener future.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Projects Section -->
+		<section id="projects" class="py-5 content-section">
+			<div class="container">
+				<div class="section-title">
+					<h2 class="animate-slideUp">Our Projects</h2>
+				</div>
+				<div class="row">
+					<div class="col-lg-4 mb-4">
+						<img
+							src="https://images.unsplash.com/photo-1503387762-592afbf09df1?q=80&w=2070&auto=format&fit=crop"
+							alt="Project 1" class="img-fluid gallery-img animate-slideUp"
+							style="animation-delay: 0.2s;">
+					</div>
+					<div class="col-lg-4 mb-4">
+						<img
+							src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2070&auto=format&fit=crop"
+							alt="Project 2" class="img-fluid gallery-img animate-slideUp"
+							style="animation-delay: 0.4s;">
+					</div>
+					<div class="col-lg-4 mb-4">
+						<img
+							src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?q=80&w=2070&auto=format&fit=crop"
+							alt="Project 3" class="img-fluid gallery-img animate-slideUp"
+							style="animation-delay: 0.6s;">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Team Section -->
+ <section id="team" class="py-5  content-section">
+	<div class="container">
+		<div class="section-title">
+			<h2 class="animate-slideUp">Founder's</h2>
+		</div>
+		<div class="row">
+			<div class="col-lg-4 mb-4">
+				<div class="card team-card p-4 text-center animate-slideUp" style="animation-delay: 0.2s;">
+					<img src="https://images.pexels.com/photos/834863/pexels-photo-834863.jpeg"
+						alt="John Doe"
+						class="mx-auto mb-2 rounded-3"
+						style="width: 130px; height: 130px; object-fit: cover;">
+					
+					<!-- Social Media Icons -->
+					<div class="mb-3">
+						<a href="#" class="text-dark me-2"><i class="bi bi-facebook"></i></a>
+						<a href="#" class="text-dark me-2"><i class="bi bi-twitter"></i></a>
+						<a href="#" class="text-dark"><i class="bi bi-linkedin"></i></a>
+					</div>
+
+					<h4>John Doe</h4>
+					<p>Lead Architect</p>
+				</div>
+			</div>
+
+			<div class="col-lg-4 mb-4">
+				<div class="card team-card p-4 text-center animate-slideUp" style="animation-delay: 0.4s;">
+					<img src="https://images.pexels.com/photos/8428101/pexels-photo-8428101.jpeg"
+						alt="Jane Smith"
+						class="mx-auto mb-2 rounded-3"
+						style="width: 130px; height: 130px; object-fit: cover;">
+
+					<div class="mb-3">
+						<a href="#" class="text-dark me-2"><i class="bi bi-facebook"></i></a>
+						<a href="#" class="text-dark me-2"><i class="bi bi-twitter"></i></a>
+						<a href="#" class="text-dark"><i class="bi bi-linkedin"></i></a>
+					</div>
+
+					<h4>Jane Smith</h4>
+					<p>Project Manager</p>
+				</div>
+			</div>
+
+			<div class="col-lg-4 mb-4">
+				<div class="card team-card p-4 text-center animate-slideUp" style="animation-delay: 0.6s;">
+					<img src="https://images.pexels.com/photos/30692587/pexels-photo-30692587.jpeg"
+						alt="Mike Johnson"
+						class="mx-auto mb-2 rounded-3"
+						style="width: 130px; height: 130px; object-fit: cover;">
+
+					<div class="mb-3">
+						<a href="#" class="text-dark me-2"><i class="bi bi-facebook"></i></a>
+						<a href="#" class="text-dark me-2"><i class="bi bi-twitter"></i></a>
+						<a href="#" class="text-dark"><i class="bi bi-linkedin"></i></a>
+					</div>
+
+					<h4>Mike Johnson</h4>
+					<p>Construction Lead</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+		<!-- Testimonials Section -->
+<section id="testimonials" class="py-5 content-section">
+    <div class="container">
+        <div class="section-title text-center">
+            <h2 class="animate-slideUp">Happy Clients</h2>
+        </div>
+
+        <!-- Carousel Wrapper -->
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+            <div class="carousel-inner">
+                <!-- We'll create groups manually -->
+                <div class="carousel-item active">
+                    <div class="row justify-content-center">
+                        <!-- First group of 3 testimonials -->
+                        <div th:each="testimonial, stat : ${testimonials}" 
+                             th:if="${stat.index < 3}"
+                             class="col-md-4 mb-4">
+                            <div class="card testimonial-card p-3 mx-auto" style="max-width: 300px; min-height: 300px;">
+                                <img th:src="@{'/image/' + ${testimonial.photo}}" alt="Client Photo"
+                                     class="rounded-circle mx-auto mb-2"
+                                     style="width: 80px; height: 80px; object-fit: cover;">
+                                <h5 class="mt-2" th:text="${testimonial.clientName}">Client Name</h5>
+                                <p class="mt-2 small" th:text="${testimonial.message}">Client testimonial message...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second group of 3 testimonials (if available) -->
+                <div th:if="${#lists.size(testimonials) > 3}" class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div th:each="testimonial, stat : ${testimonials}" 
+                             th:if="${stat.index >= 3 and stat.index < 6}"
+                             class="col-md-4 mb-4">
+                            <div class="card testimonial-card p-3 mx-auto" style="max-width: 300px; min-height: 300px;">
+                                <img th:src="@{'/image/' + ${testimonial.photo}}" alt="Client Photo"
+                                     class="rounded-circle mx-auto mb-2"
+                                     style="width: 80px; height: 80px; object-fit: cover;">
+                                <h5 class="mt-2" th:text="${testimonial.clientName}">Client Name</h5>
+                                <p class="mt-2 small" th:text="${testimonial.message}">Client testimonial message...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more groups as needed -->
+            </div>
+
+            <!-- Only show controls if we have more than 3 testimonials -->
+            <button th:if="${#lists.size(testimonials) > 3}" class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button th:if="${#lists.size(testimonials) > 3}" class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+		<!-- Contact Section -->
+		<section id="contact" class="py-5  content-section">
+			<div class="container">
+				<div class="section-title">
+					<h2 class="animate-slideUp">Get in Touch</h2>
+				</div>
+				<div class="row">
+					<div class="col-lg-6">
+						<form class="contact-form" th:action="@{/contactus/submit}" th:object="${contactUs}" method="POST">
+							<div class="form-control">
+								<input type="text" class="form-control" th:field="${contactUs.name}" placeholder="Name"
+									required>
+							</div>
+							<div class="form-control">
+								<input type="email" class="form-control" th:field="${contactUs.email}" placeholder="Email"
+									required>
+							</div>
+							
+							<div class="form-control">
+								<textarea class="form-control" th:field="${contactUs.message}" placeholder="Message" rows="5"
+									required></textarea>
+							</div>
+							<button type="submit" class="btn btn-primary">Send
+								Message</button>
+						</form>
+					</div>
+					<div class="col-lg-6 contact-info">
+						<h4 class="animate-slideUp" >Contact Info</h4>
+						<p class="animate-slideUp" >
+							<i class="fa-solid fa-phone"></i> <span th:text="${contactDetail.phone}"></span>
+						</p>
+						<p class="animate-slideUp">
+							<i class="fa-solid fa-envelope"></i> <span th:text="${contactDetail.email}"></span>
+						</p>
+						<p class="animate-slideUp">
+							<i class="fa-solid fa-globe"></i>  <span th:text="${contactDetail.website}"></span>
+						</p>
+						<p class="animate-slideUp">
+							<i class="fa-solid fa-map-marker-alt"></i>  <span th:text="${contactDetail.location}"></span>
+							USA
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		 <div th:replace="fragments/footer :: footer"></div>
+	</div>
+
+	<!-- Bootstrap 5.3.2 JS Bundle with Popper -->
+	<script
+		th:src="@{https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js}"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+
+	<!-- AOS Animation Library -->
+	<script th:src="@{https://unpkg.com/aos@2.3.1/dist/aos.js}"></script>
+
+	<!-- Custom JS -->
+	<script th:src="@{/js/script.js}"></script>
+
+	<script>
+	
+	document.addEventListener('DOMContentLoaded', function() {
+	    // Debug navbar toggler
+	    const navbarToggler = document.querySelector('.navbar-toggler');
+	    const navbarCollapse = document.querySelector('.navbar-collapse');
+	    
+	    navbarToggler.addEventListener('click', function() {
+	        console.log('Toggler clicked');
+	        console.log('Current collapse state:', navbarCollapse.classList.contains('show'));
+	    });
+	    
+	    // Manually trigger collapse if needed
+	    const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+	        toggle: false
+	    });
+	    
+	    navbarToggler.addEventListener('click', function() {
+	        bsCollapse.toggle();
+	    });
+	});
+		// Initialize AOS animation
+		AOS.init({
+			duration : 800,
+			easing : 'ease-in-out',
+			once : true
+		});
+
+		// Navbar scroll effect
+		window.addEventListener('scroll', function() {
+			const navbar = document.getElementById('mainNavbar');
+			if (window.scrollY > 50) {
+				navbar.classList.add('scrolled');
+			} else {
+				navbar.classList.remove('scrolled');
+			}
+		});
+	</script>
+</body>
+</html>

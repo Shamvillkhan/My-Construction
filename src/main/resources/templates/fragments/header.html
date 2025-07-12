@@ -1,0 +1,54 @@
+<header th:fragments="header">
+	<nav id="mainNavbar"
+		class="navbar navbar-expand-lg navbar-dark fixed-top"
+		style="padding-top: 0.1rem; padding-bottom: 0.1rem; min-height: 50px;">
+		<div class="container">
+			<a class="navbar-brand" th:href="@{/SK/index}">
+				<img th:src="@{/image/kem.png}" alt="ConstructPro Logo"
+				     style="width: 100px; height: auto; max-height: 80px;">
+			</a>
+
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon" ></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="custom-nav-list" style="margin: 0; padding: 0; list-style: none; display: flex; align-items: center;">
+					<li style="margin: 0 10px;">
+						<a class="custom-nav-btn" th:href="@{/SK/index}"
+						   style="padding: 0.3rem 0; display: inline-block;">Home</a>
+					</li>
+					<li style="margin: 0 10px;">
+						<a class="custom-nav-btn" th:href="@{/SK/about}"
+						   style="padding: 0.3rem 0; display: inline-block;">About</a>
+					</li>
+					<li style="margin: 0 10px;">
+						<a class="custom-nav-btn" th:href="@{/SK/service}"
+						   style="padding: 0.3rem 0; display: inline-block;">Service</a>
+					</li>
+					<li style="margin: 0 10px;">
+						<a class="custom-nav-btn" th:href="@{/SK/team}"
+						   style="padding: 0.3rem 0; display: inline-block;">Team</a>
+					</li>
+					<li style="margin: 0 10px;">
+						<a class="custom-nav-btn" th:href="@{/SK/project}"
+						   style="padding: 0.3rem 0; display: inline-block;">Our Project</a>
+					</li>
+					<li style="margin: 0 10px;">
+						<a class="custom-nav-btn" th:href="@{/SK/gallery}"
+						   style="padding: 0.3rem 0; display: inline-block;">Project Gallery</a>
+					</li>
+					
+					<li style="margin: 0 10px;">
+						<a class="custom-nav-btn" th:href="@{/admin/panel}"
+						   style="padding: 0.3rem 0; display: inline-block;">Admin</a>
+					</li>
+					 
+				</ul>
+			</div>
+		</div>
+	</nav>
+</header>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Team Member</title>
+  <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+</head>
+<body>
+
+<div class="container mt-5">
+  <h2 class="mb-4 text-center">Add Team Member</h2>
+
+  <form th:action="@{/team/add}" method="post" enctype="multipart/form-data" th:object="${team}">
+    <div class="row">
+      <!-- Name -->
+      <div class="col-md-6 mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" id="name" class="form-control" th:field="*{name}" required>
+      </div>
+
+      <!-- Position -->
+      <div class="col-md-6 mb-3">
+        <label for="position" class="form-label">Position</label>
+        <input type="text" id="position" class="form-control" th:field="*{position}" required>
+      </div>
+    </div>
+
+    <!-- About -->
+    <div class="mb-3">
+      <label for="about" class="form-label">About</label>
+      <textarea id="about" class="form-control" rows="3" th:field="*{about}" required></textarea>
+    </div>
+
+    <div class="row">
+      <!-- Facebook -->
+      <div class="col-md-4 mb-3">
+        <label for="facebook" class="form-label">Facebook</label>
+        <input type="url" id="facebook" class="form-control" th:field="*{facebookUrl}">
+      </div>
+
+      <!-- Twitter -->
+      <div class="col-md-4 mb-3">
+        <label for="twitter" class="form-label">Twitter</label>
+        <input type="url" id="twitter" class="form-control" th:field="*{twitterUrl}">
+      </div>
+
+      <!-- LinkedIn -->
+      <div class="col-md-4 mb-3">
+        <label for="linkedin" class="form-label">LinkedIn</label>
+        <input type="url" id="linkedin" class="form-control" th:field="*{linkedinUrl}">
+      </div>
+    </div>
+
+    <!-- Photo Upload -->
+    <div class="mb-4">
+      <label for="photo" class="form-label">Upload Photo</label>
+      <input type="file" id="photo" name="photo" class="form-control" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Team Member</button>
+  </form>
+</div>
+
+</body>
+</html>
