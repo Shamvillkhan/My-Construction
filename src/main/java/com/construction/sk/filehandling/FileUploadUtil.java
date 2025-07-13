@@ -27,7 +27,7 @@ public class FileUploadUtil {
         // Save file
         Path filePath = Paths.get(UPLOAD_DIR, uniqueFileName);
         Files.copy(file.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
-        System.out.println(">>>>>>>>>>>>9834884484884<<<<<<<<<<<");
+       
 
         return uniqueFileName; // Return the saved file name
     }
