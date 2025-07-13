@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.nio.file.*;
 
 public class FileUploadUtil {
-	public static final String UPLOAD_DIR="C:/Users/shamv/OneDrive/Documents/sk/src/main/resources/static/image";
+	public static final String UPLOAD_DIR="C:/Users/shamv/eclipse-workspace/sk/src/main/resources/static/image";
 
     public static String saveFile( MultipartFile file) throws IOException {
         if (file.isEmpty()) {
@@ -24,10 +24,10 @@ public class FileUploadUtil {
         String originalFilename = file.getOriginalFilename();
         String extension = originalFilename.substring(originalFilename.lastIndexOf("."));
         String uniqueFileName = System.currentTimeMillis() + "_" + originalFilename;
-
         // Save file
         Path filePath = Paths.get(UPLOAD_DIR, uniqueFileName);
         Files.copy(file.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
+        System.out.println(">>>>>>>>>>>>9834884484884<<<<<<<<<<<");
 
         return uniqueFileName; // Return the saved file name
     }

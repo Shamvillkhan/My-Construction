@@ -192,32 +192,22 @@
 
 		<!-- Projects Section -->
 		<section id="projects" class="py-5 content-section">
-			<div class="container">
-				<div class="section-title">
-					<h2 class="animate-slideUp">Our Projects</h2>
-				</div>
-				<div class="row">
-					<div class="col-lg-4 mb-4">
-						<img
-							src="https://images.unsplash.com/photo-1503387762-592afbf09df1?q=80&w=2070&auto=format&fit=crop"
-							alt="Project 1" class="img-fluid gallery-img animate-slideUp"
-							style="animation-delay: 0.2s;">
-					</div>
-					<div class="col-lg-4 mb-4">
-						<img
-							src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2070&auto=format&fit=crop"
-							alt="Project 2" class="img-fluid gallery-img animate-slideUp"
-							style="animation-delay: 0.4s;">
-					</div>
-					<div class="col-lg-4 mb-4">
-						<img
-							src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?q=80&w=2070&auto=format&fit=crop"
-							alt="Project 3" class="img-fluid gallery-img animate-slideUp"
-							style="animation-delay: 0.6s;">
-					</div>
-				</div>
-			</div>
-		</section>
+    <div class="container">
+        <div class="section-title">
+            <h2 class="animate-slideUp">Our Projects</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 mb-4" 
+                 th:each="project, stat : ${projects}" 
+                 th:style="'animation-delay: ' + (${stat.index} * 0.2) + 's;'">
+                <img th:src="@{'/image/' + ${project.image}}" 
+                     th:alt="${project.name}" 
+                     class="img-fluid gallery-img animate-slideUp" />
+            </div>
+        </div>
+    </div>
+</section>
+
 
 		<!-- Team Section -->
  <section id="team" class="py-5  content-section">

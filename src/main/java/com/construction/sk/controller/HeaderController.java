@@ -30,6 +30,7 @@ public class HeaderController {
 	
 	private TeamService teamService;
 	private  ProjectService projectService;
+	
  
 	
     @Autowired
@@ -41,9 +42,11 @@ public class HeaderController {
 	}
 	
 	 @GetMapping("/index") public String home(Model model) { 
+		 List<Project> projects = projectService.getAllEvents();
 		 model.addAttribute("testimonials",testimonialSer.getAllTestimonials());
 		 model.addAttribute("contactDetail",contactDetail.getActiveDetail());
 		 model.addAttribute("contactUs", new Contactus());
+	        model.addAttribute("projects", projects);
 		 return "index"; }
 	 
 	
