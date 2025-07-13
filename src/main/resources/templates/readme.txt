@@ -1,1 +1,2 @@
-hello there i created this project from scratch and its working as expected but still some part are incomplet
+hello there i created this project from scratch and its working as expected but still some part are incomplete
+git is very interesting to learn but kinda clumsy too because it have so many commands in it 
