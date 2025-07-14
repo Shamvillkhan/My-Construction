@@ -51,14 +51,16 @@ public class HeaderController {
 	 
 	
 	@GetMapping("/about")
-	public String about() {
+	public String about(Model model) {
 		String username = SecurityContextHolder.getContext().getAuthentication().getName();
 		System.out.println("<<<<<<"+username+">>>>>");
+		model.addAttribute("contactDetail",contactDetail.getActiveDetail());
 		return "about";
 	}
 	
 	@GetMapping("/service")
-	public String service() {
+	public String service(Model model) {
+		model.addAttribute("contactDetail",contactDetail.getActiveDetail());
 		return "service";
 	}
  
@@ -73,6 +75,7 @@ public class HeaderController {
 	@GetMapping("/team")
 	public String team(Model model) {
 		model.addAttribute("teamMembers",teamService.getAllTeamMembers());
+		model.addAttribute("contactDetail",contactDetail.getActiveDetail());
 		return "team";
 	}
 	
@@ -83,6 +86,7 @@ public class HeaderController {
                         ? galleryService.searchByCategory(search)
                         : galleryService.getAllImages());
         model.addAttribute("search", search);
+        model.addAttribute("contactDetail",contactDetail.getActiveDetail());
         return "gallery";
     }
 	

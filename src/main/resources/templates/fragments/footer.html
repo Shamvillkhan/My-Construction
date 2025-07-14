@@ -1,25 +1,50 @@
-<footer th:fragments="footer" class="footer text-center">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-4 mb-4">
-						<h5>About ConstructPro</h5>
-						<p>Delivering innovative construction and architecture
-							solutions since 2000.</p>
-					</div>
-					<div class="col-lg-4 mb-4">
-						<h5>Quick Links</h5>
-						<a href="#home">Home</a> | <a href="#about">About</a> | <a
-							href="#services">Services</a> | <a href="#projects">Projects</a>
-						| <a href="#contact">Contact</a>
-					</div>
-					<div class="col-lg-4 mb-4">
-						<h5>Follow Us</h5>
-						<a href="#"><i class="fa-brands fa-facebook-f"></i></a> <a
-							href="#"><i class="fa-brands fa-twitter"></i></a> <a href="#"><i
-							class="fa-brands fa-instagram"></i></a> <a href="#"><i
-							class="fa-brands fa-linkedin"></i></a>
-					</div>
-				</div>
-				<p class="mt-4">© 2025 ConstructPro. All rights reserved.</p>
-			</div>
-		</footer>
+<footer th:fragment="footer" class="footer text-white py-5" style="background-color: #000;">
+    <div class="container">
+        <div class="row">
+            <!-- About -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5 class="text-uppercase">About ConstructPro</h5>
+                <p>We’ve been delivering innovative construction and architecture solutions since 2000, ensuring quality and client satisfaction in every project.</p>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5 class="text-uppercase">Contact Us</h5>
+                <p>
+                    <i class="fa-solid fa-location-dot me-2"></i> <span th:text="${contactDetail.location}"></span><br>
+                    <i class="fa-solid fa-phone me-2"></i>+<span th:text="${contactDetail.phone}"></span><br>
+                    <i class="fa-solid fa-envelope me-2"></i><span th:text="${contactDetail.email}"></span>
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5 class="text-uppercase">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#home" class="text-white text-decoration-none">Home</a></li>
+                    <li><a href="#about" class="text-white text-decoration-none">About</a></li>
+                    <li><a href="#services" class="text-white text-decoration-none">Services</a></li>
+                    <li><a href="#projects" class="text-white text-decoration-none">Projects</a></li>
+                    <li><a href="#contact" class="text-white text-decoration-none">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Follow Us -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5 class="text-uppercase">Follow Us</h5>
+                <div>
+                    <a href="#" class="text-white me-3"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="text-white"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <hr class="border-secondary">
+
+        <div class="text-center mt-3">
+            <p class="mb-0">© 2025 <strong>ConstructPro</strong>. All rights reserved. | Designed by YourCompany</p>
+        </div>
+    </div>
+</footer>

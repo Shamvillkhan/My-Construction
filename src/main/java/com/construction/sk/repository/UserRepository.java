@@ -10,6 +10,6 @@ import com.construction.sk.entity.Users;
 @Repository
 public interface UserRepository extends JpaRepository<Users, Long>{
 
-	Users  findByUsername(String username);
+	Optional<Users>  findByUsername(String username);
 
 }

@@ -2,6 +2,7 @@ package com.construction.sk.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import com.construction.sk.entity.Quotation;
 import com.construction.sk.entity.Users;
 import com.construction.sk.repository.UserRepository;
+import com.construction.sk.service.ContactDetailService;
 import com.construction.sk.service.QuotationService;
 
 import java.math.BigDecimal;
@@ -25,20 +27,18 @@ public class QuotationController {
     
     @Autowired
     private UserRepository userRepo;
+    
+    @Autowired
+    private ContactDetailService contactDetail;
 
-    @GetMapping
-    public String listQuotations(Model model) {
-        List<Quotation> quotations = quotationService.getAllQuotations();
-        model.addAttribute("quotations", quotations);
-        return "quotations/list"; // quotations/list.html
-    }
-
+  
     @GetMapping("/new")
     public String showCreateForm(Model model) {
     	String username = SecurityContextHolder.getContext().getAuthentication().getName();
 		System.out.println("<<<<<<"+username+">>>>>");
-    	model.addAttribute("users",userRepo.findByUsername(username));
+    	model.addAttribute("users",userRepo.findByUsername(username).get().getUsername());
     	model.addAttribute("quotation", new Quotation());
+    	model.addAttribute("contactDetail",contactDetail.getActiveDetail());
         return "quotation-form"; // quotations/create.html
     }
 
@@ -47,7 +47,8 @@ public class QuotationController {
         
         // ✅ Get logged-in user
         String username = SecurityContextHolder.getContext().getAuthentication().getName();
-        Users user = userRepo.findByUsername(username);
+        Users user = userRepo.findByUsername(username)
+                .orElseThrow(() -> new UsernameNotFoundException("User not found: " + username));
         quotation.setUser(user);
 
         // ✅ User input
