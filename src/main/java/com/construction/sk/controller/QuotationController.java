@@ -103,6 +103,7 @@ public class QuotationController {
         model.addAttribute("difference", difference);
         model.addAttribute("message", message);
         model.addAttribute("budgetStatus", budgetStatus);
+        model.addAttribute("contactDetail",contactDetail.getActiveDetail());
 
         return "quotation"; // ⬅️ summary page (quotation.html)
     }
