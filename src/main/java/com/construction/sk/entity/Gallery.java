@@ -3,7 +3,7 @@ package com.construction.sk.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "gallery")
+@Table(name = "_gallery")
 public class Gallery {
 
     @Id

@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "contact_details")
+@Table(name = "_contact_details")
 public class ContactDetail {
 
     @Id
@@ -25,7 +25,7 @@ public class ContactDetail {
     @Column(name="active",nullable = false)
     private boolean active ;
     
-    @Column(name="created_At")
+    @Column(name="created_at")
     private LocalDateTime createdAt;
 
     public ContactDetail() {}

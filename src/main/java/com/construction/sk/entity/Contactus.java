@@ -10,7 +10,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="contact_us")
+@Table(name="_contact_us")
 public class Contactus {
 	
 	@Id
